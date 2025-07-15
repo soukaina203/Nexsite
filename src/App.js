@@ -6,6 +6,8 @@ import Mission from './components/Mission'
 import Quote from './components/Quote'
 import Steps from './components/Steps'
 import Method from './components/Method'
+import Cta from './components/Cta';
+import Footer from './components/Footer';
 function App() {
   return (
     <div className="App">
@@ -15,6 +17,8 @@ function App() {
      <Quote />
      <Steps />
      <Method />
+     <Cta/>
+     <Footer />
     </div>
   );
 }
