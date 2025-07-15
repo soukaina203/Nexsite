@@ -11,10 +11,10 @@ function Hero() {
 
           </div>
         </div>
-        <div class="max-w-full mx-auto py-11 sm:py-48 lg:py-56 ">
+        <div class="max-w-full mx-auto py-11 sm:py-48 lg:py-44 ">
           <div class="mt-[-3rem] text-center sm:mt-[-1rem]  flex justify-center items-center flex-col">
 
-            <h1 class="p-3  text-4xl  font-bold leading-10  line-height-[3rem] text-gray-900 sm:text-5xl md:text-6xl lg:text-[3.5rem]">Need A Website That showcase your services</h1>
+            <h1 class="p-3  text-4xl  font-bold leading-10  line-height-[3rem]  sm:text-5xl md:text-6xl lg:text-[3.5rem]  text-[#2E849D]">Need A Website That showcase your services</h1>
             <p class="max-w-2xl mt-3 text-lg leading-8 text-gray-600 sm:text-base md:text-lg lg:text-xl">Or Struggling with the online presence of your business : Nexsite is here to accoumplish that mission</p>
             <div class="flex flex-col sm:flex-row items-center justify-center mt-10 gap-4 max-w-2xl text-[2rem] sm:gap-x-6">
 

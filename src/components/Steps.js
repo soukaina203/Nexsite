@@ -1,39 +1,70 @@
-import React from 'react'
-import { FaRegChartBar } from "react-icons/fa6";
+import React from 'react';
+import {
+  FaCogs,           // Professional process
+  FaRegClock,       // Delivering in deadlines
+  FaBell,           // Keep you updates
+  FaCheckCircle     // Validate the work
+} from 'react-icons/fa';
 
 function Steps() {
-    let steps=[
-        {icon:<FaRegChartBar className=' w-[4rem] h-[4rem]' />,title:'Professional process'},
-        {icon:<FaRegChartBar className=' w-[4rem] h-[4rem]' />,title:'Delivering In Deadlines'},
-        {icon:<FaRegChartBar className=' w-[4rem] h-[4rem]' />,title:'Keep You Updates'},
-        {icon:<FaRegChartBar className=' w-[4rem] h-[4rem]' />,title:'Validate The Work in each step'},
-    ]
+  const steps = [
+    {
+      icon: <FaCogs className="text-3xl text-white transition-transform duration-300 group-hover:scale-110" />,
+      title: 'Professional Process',
+    },
+    {
+      icon: <FaRegClock className="text-3xl text-white transition-transform duration-300 group-hover:scale-110" />,
+      title: 'Delivering in Deadlines',
+    },
+    {
+      icon: <FaBell className="text-3xl text-white transition-transform duration-300 group-hover:scale-110" />,
+      title: 'Keep You Updated',
+    },
+    {
+      icon: <FaCheckCircle className="text-3xl text-white transition-transform duration-300 group-hover:scale-110" />,
+      title: 'Validate the Work at Each Step',
+    },
+  ];
+
   return (
     <div>
-    <div className="relative w-full h-full">
-    <img src="steps.png" alt="" className="object-cover w-full h-full" />
-    <h1 className="absolute inset-0 flex items-center justify-center  ml-auto mr-auto text-7xl max-w-4xl text-center font-bold text-[#EEF1F0]">
-        Because Your Satisfaction Is Our Priority
-    </h1>
-</div>
-
-
-      <section className="flex items-center justify-center w-full h-full py-8">
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-        {steps.map((property) => (
-          <div key={property.title} className="flex flex-col hover:-translate-y-1n hover:shadow-xl p-6 bg-[#EEF1F0] border-2 rounded-md  
-          transition-all hover:scale-110  cursor-pointer  duration-300  w-[17rem] h-[16rem]
-           translate-y-[-70%] transform  shadow-lg">
-            <div className="flex-shrink-0 p-4 gap-3">
-              {property.icon}
-            </div>
-              <h2 className="text-left max-w-xl  font-semibold text-2xl text-[#2A656D] ">{property.title}</h2>
-          </div>
-        ))}
+      {/* Hero text on image */}
+      <div className="relative w-full h-[370px]">
+        <img src="steps.png" alt="Steps background" className="object-cover w-full h-full" />
+        <h1 className="absolute inset-0 flex items-center justify-center px-6 text-4xl md:text-6xl lg:text-7xl font-bold text-[#EEF1F0] text-center">
+          Because Your Satisfaction Is Our Priority
+        </h1>
       </div>
-    </section>
+
+      {/* Steps cards */}
+      <section className="flex items-center justify-center w-full py-16 bg-[white]">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {steps.map(({ icon, title }) => (
+            <div
+              key={title}
+              className="group relative flex flex-col items-start p-8 w-72 h-64 rounded-3xl border border-white/20
+                         bg-white/30 backdrop-blur-md shadow-lg transition-all duration-300 hover:-translate-y-3
+                         hover:shadow-2xl hover:shadow-[#2E849D]/40"
+            >
+              {/* Accent bar */}
+              <span className="absolute inset-x-0 top-0 h-1 rounded-t-3xl bg-gradient-to-r from-[#2E849D] to-[#35767A]" />
+
+              {/* Icon in circle */}
+              <div className="flex items-center justify-center w-16 h-16 mb-6 rounded-full
+                              bg-gradient-to-tr from-[#2E849D] to-[#35767A]">
+                {icon}
+              </div>
+
+              {/* Title */}
+              <h2 className="text-[#2A656D] text-xl font-semibold leading-snug">
+                {title}
+              </h2>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
-  )
+  );
 }
 
-export default Steps
+export default Steps;
